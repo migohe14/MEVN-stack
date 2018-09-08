@@ -4,7 +4,7 @@
   "description": "MongoDB, Expressjs, Vuejs and Node",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon src/index.js" 
+    "dev": "nodemon src/index.js"
   },
   "repository": {
     "type": "git",
@@ -19,6 +19,8 @@
   "homepage": "https://github.com/migohe14/MEVN-stack#readme",
   "dependencies": {
     "express": "^4.16.3",
+    "mongoose": "^5.2.13",
+    "morgan": "^1.9.0",
     "nodemon": "^1.18.4"
   }
 }
