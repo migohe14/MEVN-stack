@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon src/index.js",
-    "webpack": "webpack --mode development"
+    "webpack": "webpack --mode development --watch"
   },
   "repository": {
     "type": "git",
@@ -22,13 +22,15 @@
     "express": "^4.16.3",
     "mongoose": "^5.2.13",
     "morgan": "^1.9.0",
-    "nodemon": "^1.18.4"
+    "vue": "^2.5.17",
+    "vue-cli": "^2.9.6"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "babel-loader": "^8.0.2",
     "babel-preset-env": "^1.7.0",
+    "nodemon": "^1.18.4",
     "vue-loader": "^15.4.1",
     "vue-template-compiler": "^2.5.17",
     "webpack": "^4.18.0",
