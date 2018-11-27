@@ -6,11 +6,11 @@ const Task = require('../models/task');
 const request = require('request');
 
 
-router.get('/', async (req, res) => {
-    //Se pueden usar también callbacks y promises. async y await para codigo asíncrono. Consulta en la DB y cuando termines almacena en una const
-   const tasks = await Task.find();
-   res.json(tasks);
-});
+// router.get('/', async (req, res) => {
+//     //Se pueden usar también callbacks y promises. async y await para codigo asíncrono. Consulta en la DB y cuando termines almacena en una const
+//    const tasks = await Task.find();
+//    res.json(tasks);
+// });
 
 // router.post('/', async (req, res) => {
 //     const task = new Task(req.body);
@@ -21,6 +21,14 @@ router.get('/', async (req, res) => {
 // });
 
 //////////////////////////////////////////
+router.get('/', (req, res) => {
+
+
+    request('https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=MSFT&interval=5min&outputsize=full&apikey=demo', function (error, response, body){
+        res.json(response);
+    }); 
+});
+
 router.post('/', (req, res) => {
 
 
@@ -31,8 +39,7 @@ router.post('/', (req, res) => {
     });
 
     res.send({
-        success: true,
-        message: "stocks"
+        body: body
     });
 });
 /////////////////////////////////////////
